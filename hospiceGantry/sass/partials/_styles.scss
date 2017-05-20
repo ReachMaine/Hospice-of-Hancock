@@ -1,0 +1,75 @@
+/* styles.scss - Style css for Fenceviewer style, usually added to the module class
+ * 
+ * Author: LSpeight
+ */
+ .EAhide {
+	height: 0px!important;
+ 	visibility: hidden;
+ 	display: none;
+ 	margin: 0px;
+ 	padding: 0px;
+ }
+.i100 {
+	img {
+		width: 100%;
+	}
+}
+ .pt70 {
+ 	padding-top: 70px;
+ }
+
+#rt-mainbody {
+	a {
+		text-decoration: underline;
+	}
+
+}
+#rt-utility { // module class for bluebar under showcase
+	background-color: $headercolor;
+
+}
+
+.rt-block.ea-over, .rt-block.ea-over-random {
+	background-color: transparent;
+	background: linear-gradient(to right,#ffffff, rgba(0, 0, 0, 0));
+	width: 12%;
+	z-index: 400;
+	height: $slideshow-height;
+}
+
+.rt-block.ea-under, .rt-block.ea-under-random {
+	margin-top: -$slideshow-height!important;
+}
+.rt-block.ea-under-short {
+	// note: random image varies in size based on media:  278, 229
+	//margin-top: -$random-height!important;
+	//height: $random-height;
+}
+
+.rt-block.box-ea {
+	border: 1px solid $ltperiwinkle;
+	border-radius: 10px;
+	min-height: 62px;
+	background-color: $content-bkgnd;
+	.module-title {
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #FFF );	
+		border-radius: 10px;
+		h2.title {
+			padding-top:30px;
+			box-shadow: none;
+			border: none;
+			font-size: 26px;
+			font-weight: bold;
+			font-family: serif;
+			margin-bottom: 1px;
+			text-shadow: 1px 1px 0 #E9E9E9;
+		}
+	} 
+	img {
+		width: 100%;
+		border-radius: 10px;
+	}
+}

@@ -1,0 +1,347 @@
+/**
+* @author    Linda Speight - Ellsworth American Online Services
+* place into rt_hexeris/css/rt_hexeris-custom.css on server 
+* gantry/css/gantry-custom.css on server 
+*/
+
+/* Import Statements ----------------------------------- */
+/* @import "compass"; */
+/* @import "compass/reset"; */
+/* @import "compass/utilities/general/clearfix"; */ 
+@import "partials/settings";
+@import "partials/functions";
+@import "partials/styles";
+//@import "partials/media"; put these at bottom to override the default which is computer size.
+body {
+	background-color: $site-bkgnd;
+}
+/******** top layer - layer 1 *************/
+#rt-top-surround {
+	background-image:url(../images/header-4.jpg);// url(../images/header-blue.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-bottom: 0px;
+	//background-position: bottom;
+	box-shadow: none;
+	font-size: 17px;
+	text-shadow: none;
+	color: $top-addrfont;
+	.hvhc {
+		font-size: 18px;
+	}
+}
+#rt-top-surround:after {
+	background: none; // remove texture.
+
+}
+/******** header layer (2) *******************/
+#rt-header {
+	background-color: $headercolor;
+	rt-block.ea-main-menu {
+		
+	}
+}
+#rt-logo { // for some reason, logo wont go away, now a using module.
+	visibility: none;
+	display: none;
+}
+#rt-drawer {
+	border-bottom: 0px;
+}
+// logo top padding 22px;
+#rt-showcase {
+	.search {
+		padding-top: 18px;
+	}
+	#fpssContainer99.fpss-template-movies .slide-loading {
+		background-color:$ltperiwinkle;
+		background-image:url(../images/loading.gif);
+	}
+	background-color: transparent;
+	background-image: none;
+	border-bottom: 0px;
+	.rt-showcase-pattern {
+		background-image: none;
+		background-color: $content-bkgnd;
+		.rt-block {
+			padding: 0px;
+			//margin-top: -94px;
+			//margin-bottom: 0px;
+			margin: 0px;
+			.fpss-container {
+				padding: 0px;
+				margin: 0px;
+				border: 0px;
+				.navigation-wrapper {
+					.navigation-background {
+						background-color: $medperiwinkle;
+						background-image: linear-gradient(to bottom,$ltperiwinkle, $medperiwinkle);
+					}
+					ul.navigation{
+						height: 100%!important;
+						li.navigation-button{
+							height: 25%;
+						}
+					}
+				}
+				.slides-wrapper {
+					.slides-loading {
+						background-color: red!important;
+						background-image:none!important;
+					}
+
+					
+				}
+				.slides {
+					text-shadow: 0 2px 3px #000;
+					width: inherit!important;
+					.slide {
+						width: inherit!important;
+					}
+					.slidetext {
+						background:none;
+						//width: 500px;
+						width: 80%!important;
+						h1 a:hover {
+							color: #5272C4
+						}
+						.fpssReadMore {
+							width: 68px;
+							left: 420px;
+							background-color: $medperiwinkle;
+							background-image: linear-gradient(to bottom,$ltperiwinkle, $medperiwinkle);
+						}
+						.fpssReadMore:hover {
+							text-decoration: underline;
+							color: white;
+						}
+					}
+				}
+				.navigation-wrapper {
+					background: none;
+					text-shadow: 0 2px 3px #000;
+					ul.navigation {
+						list-style:none;
+						li.navigation-button {
+							background-color: $ltperiwinkle; //#5272C4;
+							background-image: none;
+							text-shadow: none;
+							a {
+								height: 65px;
+								.navigation-title {
+									font-size: 14px;
+									text-shadow: 0 1px 1px #707070;
+								}
+								.navigation-text {
+									//text-shadow: 0 1px 1px #000;
+								}
+								.navigation-thumbnail {
+									display:none;
+									visibility: hidden;
+									border: none;
+									margin: none;
+								}
+							}
+							
+						} 
+						li.navigation-button.active {
+							//background-color: red;
+							background-image: none;
+						}
+					}
+				}
+				
+			}
+		}
+		
+	}
+
+}
+
+/******** main content layer,  with content & side bars **********/
+#rt-main {
+	background-color: $content-bkgnd;
+	.rt-container > div > .rt-block:first-child { // first child is main content;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin-top: 0px;
+	}
+	//border: 1px #E5E5E5 solid;
+	//border-radius: 3px;
+	.search {
+		#mod-search-searchword{
+			max-width: 100%; // keep the search input inside the sidebar
+		}
+	}
+
+}
+
+
+#rt-mainbottom {
+	background-color: $ltperiwinkle;
+	background: -webkit-linear-gradient(#FFFFFF, $ltperiwinkle);
+	background-image: linear-gradient(to bottom, #FFFFFF, $ltperiwinkle);
+}
+
+.formResponsive input[type="submit"] {
+	background-color: $medperiwinkle;
+	background: -webkit-linear-gradient($ltperiwinkle, $medperiwinkle);
+	background-image:  linear-gradient(to bottom,  $ltperiwinkle, $medperiwinkle);
+}
+.formResponsive .formHorizontal .formControls {
+	padding-left: 0px;
+}
+#rt-footer {
+	border: 0px;
+}
+#rt-copyright {
+	border: 0px;
+	background-color: $ltperiwinkle;
+	box-shadow: none;
+	//-webkit-box-shadow: inset 0 1px 0 $medperiwinkle;
+	//-moz-box-shadow: inset 0 1px 0 $medperiwinkle;
+	//box-shadow: inset 0 1px 0 $medperiwinkle;
+	//box-shadow: $medperiwinkle;
+}
+
+.component-content .items-more ol li a:before {
+	content: "";
+}
+/************ styling for calendar **********/
+ #jevents_header { // hide the jevents link next to print & email buttons.
+ 	.info-icon {
+ 		display: none;
+ 	}
+
+ }
+#jevents_body {
+ 	.cal_div_currentmonth {
+ 		background-color: $paleperiwinkle;
+ 	}
+ 	.cal_div_today span {
+ 		background-color: $paleperiwinkle;
+ 	}
+ 	.event_legend_container {
+ 		background-color: $paleperiwinkle;
+ 	}
+ 	.ev_detail.hits, 
+ 	.ev_detail.contact {
+ 		display: none;
+ 	}
+ 	.jev_catselect { // ddl at top of specific calendar lists. (ex: volunteer training)
+ 		margin-bottom: 8px;
+ 		table { // hide the ddl
+ 			display: none;
+ 			visibility: hidden;
+ 		}
+ 	}
+ 	.contentheading {
+ 		color: $medperiwinkle;
+ 		font-weight: bold;
+ 		font-size: 20px;
+ 	}
+ }
+
+/************ hikashop styling ******************/
+.hikashop_cart_input_button {  // add to cart button
+	border: none;
+}
+#rt-main {
+	.hikashop_product_stock {
+		a {
+			text-decoration: none;
+		}
+	} 
+	.hikashop_subcontainer.thumbnail {
+
+	}
+}
+span.hikashop_product_price { // color of price
+	color: $medperiwinkle;
+}
+span.hikashop_checkout_cart_final_total {
+	color: black;
+	font-size: 20px;
+	line-height: 22px;
+}
+.hikashop_cart_total_title hikashop_cart_title {
+	vertical-align: bottom;
+}
+.hikashop_footer { // hide title in top of table display of products.
+	display: none;
+	visibility: hidden;
+	height: 0px;
+	padding: 0px;
+}
+.hikashop_product_image.title, 
+.hikashop_product_name.title,
+.hikashop_product_vote.title, 
+.hikashop_product_price.title {
+	display: none;
+	visibility: hidden;
+}
+.hikashop_product_right_part .hikashop_product_quantity_main .hikashop_product_stock {
+	table { 
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+.hikashop_products_listing .hikashop_products .thumbnails .hikashop_product {
+	margin-bottom: 0px; // less separation between products on category listing page.
+}
+.hikashop_products_listing .hikashop_product_image {
+	//background-color: red;
+	//height: 80px;
+}
+// now for the cart module
+#hikashop_cart_module {
+	.hikashop_cart_input_button {
+		background-color: transparent;
+		border: none;
+		background-image: none;
+		color: $linkcolor;
+		box-shadow: none;
+		padding: 0px;
+		text-shadow: none;
+		// border-bottom: 1px solid $linkcolor;
+		text-decoration: underline;
+		border-radius: 0px;
+	}
+}
+#hikashop_checkout_page {
+	form table tbody td.key {
+		padding-right: 5px;
+	}
+
+}
+#hikashop_checkout_status,
+#hikashop_payment_methods {
+		display: none;
+	}
+
+/************ end hikashop styling **************/
+/******* styling for Simple Image Galleries ****************/
+#rt-main .sigProContainer  {
+	.sigProImg {
+		margin: 0px;
+	}
+	li.sigProThumb  {
+		margin: 3px;
+	}
+}
+
+
+/********end styling for Simple Image Galleries ************/
+/******* search results styling *************/
+.component-content .search-results .result-created { // hide the created date in search results
+	display: none;
+	padding: none;
+	margin: none;
+	border: none;
+	visibility: hidden;
+
+}
+/******* end search results styling *************/
+/**** keep this at bottom st this is default, and media overrides the ones here *********/
+@import "partials/media";

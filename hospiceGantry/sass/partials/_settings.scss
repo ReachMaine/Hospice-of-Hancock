@@ -1,0 +1,325 @@
+/* Colors ---------------------------------------------- */
+$site-bkgnd: #FFFFFF; //#E3ECFD;
+$content-bkgnd: #FFFFFF;
+$paleperiwinkle:#D0DEFF;
+$ltperiwinkle:#A7B6DB;// for copyright footer. #D7D7FF; // #CCCCFF; //#C5C9F7;
+$medperiwinkle: #5272C4;
+
+$readmore-top-grad: #87B381;
+$readmore-bottom-grad: #52854B;
+$linkcolor: #40693A; // set in template manager settings. old:  #738fd2
+$linkhovercolor: black;
+$menuhover: #E4EAFA; // for ari flyout menu, set in module manager settings.
+$submenuhover: #000000;
+$medltblue: #CAD3e9;
+$headercolor: #5272C4; // #2E50A7;
+
+$main-menu-color: #FFFFFF;
+$main-menuactive: #5272C4;
+$main-menuactive-border: #476AC1; // could try 3A60C1;
+$main-menuhover: #A7B6DB; //#5272C4; // #87B381; - was green //#2c87c0;
+$main-menuhover-border: #476AC1;
+$top-addrfont: #324F2C;// font color of address in header.
+
+$slideshow-height: 300px;
+$random-height: 278px;
+/* Typography ------------------------------------------ */
+h1, h2, h3, h4, h5, h6, .component-content h2, .module-title .title  {
+	color: $headercolor;
+}
+h1 {
+	font-size: 150%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+h3 {
+	font-size: 18px;
+	line-height: 21px;
+}
+h4 {
+	font-size: 21px;
+	line-height:24px;
+}
+h4, h5, h6, blockquote, blockquote p {
+	//font-family: Cambria, Georgia, Times, "Times New Roman", serif;
+	font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	//font-family: serif;
+}
+blockquote, blockquote p {
+	font-size: 18px;
+}
+p, blockquote p {
+	margin: 0 0 15px 0;
+}
+.module-title .title {
+	font-size: 24px;
+	padding-top: 15px;
+	padding-bottom: 0px;
+}
+
+/* Classes ---------------------------------------------- */
+
+/**** readmore ****/
+.readmore a, .readmore a:hover, 
+.readmore, .readmore:hover {
+	background-color: transparent;
+	border: none;
+	background-image: none;
+	color: $linkcolor;
+	box-shadow: none;
+	padding: 0px;
+	text-shadow: none;
+
+}
+.readmore:hover, .readmore a:hover {
+	color: $linkhovercolor;
+}
+
+.readmore:after {
+	content: " >>>";
+}
+.readmore:hover:after {
+	//font-weight: bold;
+	text-decoration: none;
+}
+
+ul.pagenav li.pagenav-prev, ul.pagenav li.pagenav-next {
+	padding: 4px 10px;
+}
+ul.pagenav {
+	li.pagenav-prev, li.pagenav-next, li.pagenav-prev a, li.pagenav-next a {
+		color: #303030;
+	}
+	li.pagenav-prev a:hover, li.pagenav-next a:hover {
+		text-decoration: underline;
+	}
+}
+//.pagenav a:hover, .pagenav span:hover,
+.pagenav 
+.button, .btn-primary, button.validate, .readon, .readmore {
+	// background-color: $menuhover!important;
+}
+.readmore { // testing for readmore, to see if they like it.
+	//border-radius: 28px;
+}
+.btn:hover {
+	background-position: center;
+}
+// header (title & address & Volunteers since...)
+.ea-header {
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+.hvhc-title {
+	font-size: 17px;
+}
+.hvhc-addr {
+	font-size: 13px;
+	line-height: 15px;
+	margin-bottom: 25px;
+}
+.hvhc-since {
+	padding-top: 76px; // push to bottom of header.
+	font-size: 24px;
+	line-height: 27px;
+	text-align: right;
+}
+//newsflash in sidebar, 
+.newsflash {
+	p {
+		margin-bottom: 6px;
+	}
+}
+
+.rt-block.ea-logo {
+	img {
+		max-width: 90%;
+		padding-top: 60px;
+	}
+}
+/**************** menus ******************/
+#rt-header {
+	.ea-main-menu { /* setting for main menu */
+		.menutop li .item {
+			background-color: transparent;
+			border: 0px;
+			color: $main-menu-color;
+		}
+		// hover = li:hover AND a.item:hover
+		.menutop li:hover .item:hover, .menutop li.active .item:hover {
+			background-color: $main-menuhover;
+			border: 0px;
+			span {
+				//background-color: red;
+			}
+		
+		}
+		// active
+		.menutop li.active > .item, .menutop li.active:hover > .item:hover {
+			//background-color: red;//$main-menuactive;
+			text-decoration: underline;
+		}
+		.menutop li.active a:hover { // active AND Hover
+			//text-decoration: underline;
+		} 
+		// separator line in between, border on the span, move most of padding to span and not <a>
+		ul.menutop li a {
+			padding: 0px;
+			span {
+				margin: 0px 5px;
+				padding:0px 15px;
+			}
+		}
+		ul.menutop li:not(:first-child) a span { // this is the line, a border on the span
+			border-left: 1px solid white;
+
+		}
+	}
+}
+.ea-menu { // used on sidebar menu's both left & right
+
+	// general styling of ea-menu 
+	ul.menu {
+	}
+	ul li {
+		margin-bottom: 0px;
+	}
+	.li a, li a span {
+		line-height: 23px;
+		font-size: 15px;
+		font-weight: normal;
+	}
+
+	// make top level menus bold 
+	ul.menu > li > a > span, ul.menu > li > a {
+		font-weight: bold;
+	}
+	// remove the active >. //color the active >.
+	ul.menu li.active.current > a:before, ul.menu li.active.current > .item:before, ul.menu li.active.current > .separator:before, ul.menu li#current.active > a:before, ul.menu li#current.active > .item:before, ul.menu li#current.active > .separator:before {
+		//color: $main-menuactive;
+		content: none;
+		margin-right: 0px;
+	}
+	/*
+	ul.menu li.active.current a,
+	ul.menu li.active.current > .item, 
+	ul.menu li.active.current > .separator,
+	ul.menu li#current.active > a, 
+	ul.menu li#current.active > .item, 
+	ul.menu li#current.active > .separator {
+			text-decoration: underline;
+	} */
+	ul.menu li.active > a > span {
+		text-decoration: underline;
+		//padding-left: 0px;
+	}
+	ul.menu li.active > a > span:hover {
+		font-weight: bold;
+	}
+
+	// remove .'s on top level menus (keep for sub menus)
+	ul.menu > li > a:before, ul.menu > li > .item:before, ul.menu > li >.separator:before {
+		content: none;
+	}
+	// remove all the "." inserted before with css.
+	ul.menu li a:before, ul.menu li .item:before, ul.menu li .separator:before {
+		content: none;
+	}
+	ul.menu > li > ul { // put the disc on submenus.
+		padding-left: 17px;
+		list-style: disc;
+		//list-style-position: inside; i.e. displays this differently, try padding
+		span {
+			padding-left: 3px;
+		}
+	}
+	//
+	ul.menu li.active.current> a, ul.menu li.active.current > .item, ul.menu li.active.current > .separator
+	ul li span:hover, ul li a:hover, ul li a span:hover {
+		//font-weight: bold;
+		text-decoration: underline;
+	}
+	ul.menu li ul { // dont indent second tier 
+		margin-left: 0px;
+	}
+}
+
+#rt-sidebar-b .ea-menu.rt-block .menu li a span {
+	font-size: 13px;
+}
+/******* end of menu styling ******************/
+/******* Content styling ******************/
+#rt-mainbody {
+	.component-content .column-1, 
+	.component-content .column-2 { // trying to get bottom borders of main content & sidebarb to line up. - still
+		padding-top: 0px;
+	}
+	article.item-page, .items-leading article, .items-row article {
+		h2 a {
+			color: $headercolor;
+			text-decoration: none;
+		}
+	}
+	article.item-page {
+		h2 a {
+			color: $headercolor;
+			text-decoration: none;
+		}
+		img {
+			margin: 6px;
+		}
+	}
+	.component-content section.blog {
+		.items-row.cols-2 {
+			article.item {
+				margin: 0px;
+				div.img-intro-none, div.img-intro-right {
+					img {
+						width: 35%;
+						padding-right: 5px;
+						float: left;
+					}
+
+				}
+			}
+		}
+	}
+
+}
+/******* end Content styling ******************/
+/*-- contact form styling ---*/
+.contact .page-header {
+	padding-bottom: 0px; // tighten up the contact form.
+}
+.form-actions {
+	background-color: $content-bkgnd;
+}
+/*---end contact form styling --*/
+
+// syling for RS Forms 
+//#rsform_3_page_0 { // donation form
+	.formResponsive .formHorizontal .formControls {
+		margin-left: 0px;
+		padding-left: 160px;
+	}
+	.formResponsive .formHorizontal .rsform-block {
+		margin-bottom: 0px;
+	}
+	form.formResponsive .formHorizontal .rsform-block-header {
+		.formControlLabel {
+			width: 0px;
+		}
+		.formControls {
+			margin-left: 0px;
+			padding-left: 0px;
+		}
+		
+	}
+	form.formResponsive {
+		.rsformVerticalClear {
+			clear: both;
+			padding-left: 10%;
+		}
+	}
+//}
+
+

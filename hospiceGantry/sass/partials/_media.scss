@@ -1,0 +1,257 @@
+/* ===================================================== */
+/* Media Queries --------------------------------------- */
+/* ===================================================== */
+
+$smallphone-max: 480px;
+$largephone-min:481px;
+$phone-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 959px;
+$desktop-min: 960px;
+$desktop-max: 1199px;
+$largedisplay-min: 1200px;
+/************ header ***********/
+@media(max-width: $phone-max) {
+	.hvhc-since {
+		padding-top: 0px; // undo push to bottom of header.
+		text-align: center;
+	} 
+
+}
+
+@media(min-width: $largedisplay-min) {
+	#rt-sidebar-b {
+		padding-top: 15px; // trying to align borders under main content heading & sidebar heading
+	}
+}
+
+@media(max-width: $desktop-max) {
+	#rt-sidebar-b .rt-block {
+		padding-top: 0px!important;
+		margin-top: 0px!important;
+	}
+}
+@media(max-width: $tablet-max) and (min-width: $tablet-min) {
+
+	#rt-showcase { // at tablet size, make search bar in showcase certain size.
+		.search form input {
+			width: 160px;
+		}
+	}
+
+}
+
+@media(max-width: $tablet-max) {
+	#rt-top-surround {	
+		height: auto;
+	}
+}
+@media(max-width: $smallphone-max) {
+	.rt-block.ea-header {
+		padding-right: 0px;
+		margin-left: 0px;
+	}
+}
+/*********** top menu *********************/
+// at tablet size, min padding st. it doesnt wrap
+@media(min-width:$largephone-min ) and (max-width: $phone-max) { //481 to 766px;
+	#rt-header .ea-main-menu {
+		ul.menutop li a span {
+			padding:0px 12px;
+		}
+	}
+}
+// at phone size - stack menu items.
+@media(max-width: $smallphone-max) {
+	#rt-header {
+		.ea-main-menu {
+			ul.menutop li {
+				width: 100%;
+			
+				a {
+					text-align:center;
+					width: 100%;
+					span {
+						border-left: 0px;
+					}
+				}
+			}
+			ul.menutop li:not(:first-child) a span { // turn off this line.
+				border-left: 0px;
+			}
+			ul.menutop li:not(:first-child) a { // this is the line, a border on the span
+				border-top: 1px solid #B8B8B8;
+			}
+		}
+	}
+}
+
+/**** logo &  random images ****/
+@media (min-width: $desktop-min) and (max-width: $desktop-max) { // 960 to 1199
+	.rt-block.ea-under-random {
+		margin-top: -247px!important;
+	}
+	.rt-block.ea-over-random {
+		height: 247px!important;
+	}
+	.rt-block.ea-logo {
+		img {
+			padding-top: 30px;
+		}
+	}
+}
+@media(min-width: $tablet-min) and (max-width: $tablet-max) { // 767 to 959 
+	.rt-block.ea-under-random {
+		margin-top: -197px!important;
+	}
+	.rt-block.ea-over-random {
+		height: 197px!important;
+	}
+	.rt-block.ea-logo {
+		img {
+			padding-top: 5px;
+		}
+	}
+}
+@media (max-width: $phone-max){ // at phone size, minimize the top padding
+	.rt-block.ea-under-random {
+		margin-top: -165px!important;
+	}
+	.rt-block.ea-over-random {
+		height: 165px!important;
+	}
+	.rt-block.ea-logo {
+		img {
+			padding-top: 10px;
+		}
+	}
+}
+@media (max-width: $smallphone-max) {
+	.rt-block.ea-under-random {
+		margin-top: 0px!important;
+	}
+	.rt-block.ea-over-random {
+		display:none;
+	}
+}
+/************ slide show **********************/
+ /** getting FPSS to be 'responsive'  **/
+ /*********************************************/
+@media(min-width: $largedisplay-min) { // 1200 px wide or wider
+	.fpss-container{
+		width:100%!important;
+		height:auto!important;
+		.slides-wrapper {
+			//width: 66%; // 
+			width: 575px!important; // 600 - 25 
+		}
+		.navigation-wrapper {
+			//width: 33%; //
+			width: 300px!important;
+		}
+	}
+}
+@media(min-width: $desktop-min) and (max-width: $desktop-max) { // 960 to 1199
+
+	.fpss-container{
+		width:100%!important;
+		height:auto!important;
+		.slides-wrapper {
+			width: 455px!important; // 480-25;//80%!important; // or 600px;
+			.slide img {
+				height: 300px;
+			}
+		}
+		.navigation-wrapper {
+			//width: 20%!important; // 300px
+			width: 240px!important;
+		}
+
+	}
+	#rt-showcase { 
+		.rt-showcase-pattern .rt-block .fpss-container .slides .slidetext .fpssReadMore {
+			left: 310px; // slide readmore over..
+		}
+	}
+}
+
+// hide navigation on devices when not desktop
+@media (max-width:$tablet-max) {
+	.navigation-wrapper{
+		display: none;
+		visibility: hidden;
+	}
+}
+@media(min-width: $tablet-min) and (max-width: $tablet-max) { // 767 to 959 
+	.fpss-container{
+		width:100%!important;
+		height:auto!important;
+		.slides-wrapper {
+			width: 560px!important;; // 
+					}
+		/* orginally going to put navigation under the slide show at this height
+		.navigation-wrapper { 
+			width: 100%!important;  // 
+			height: auto!important;
+			font-size: 0px;
+			ul.navigation {
+				li.navigation-button {
+					height: 45px!important;
+					width: 25%!important;
+					display: inline-block;
+					a {
+						border-top:1px solid #5c5a5b!important; // the first button doesnt have this, looks weird when under
+					}
+				}
+			}
+		} **/
+	}
+	#rt-showcase { 
+		.rt-showcase-pattern .rt-block .fpss-container .slides .slidetext .fpssReadMore {
+			left: 415px; // slide readmore over.
+		}
+	}
+}
+@media (max-width: $phone-max) { //
+	.fpss-container{
+		width:100%!important;
+		height:auto!important;
+		.slides-wrapper {
+			width: 100%!important; // 
+		} 
+	}
+	#rt-showcase { 
+		.rt-showcase-pattern .rt-block .fpss-container .slides .slidetext .fpssReadMore {
+			left: 335px; // slide readmore over.
+		}
+	}
+}
+@media (max-width: $smallphone-max) { //
+	#rt-showcase { 
+		.rt-showcase-pattern .rt-block .fpss-container .slides .slidetext .fpssReadMore {
+			left: 200px; // slide readmore over.
+		}
+	}
+}
+/************* end of FPSS media sytling **************/
+@media(min-width: 960px) {
+	.ea-menu { // used on sidebar menu's
+		//margin-top: 65px;
+		//border-top: 1px #D1D1D1 solid;
+	}
+}
+/********* other stuff **********/
+@media (min-width: 768px) and (max-width: 1199px) {
+	// shopping cart table sizing.
+	.hikashop_cart_product_image_thumb {
+		width: 100px;
+	}
+}
+
+/******** the bottom *********/
+@media(min-width: $tablet-min) { // add padding/margin to bottom boxes s.t. they link up with
+								// menu & FPSS at 
+	#rt-mainbottom {
+		padding-right: 25px; // making 
+	}
+}
